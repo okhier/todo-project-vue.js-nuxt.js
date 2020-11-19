@@ -23,10 +23,15 @@
     width: 6rem;
 }
 
-.todo-list {
-    cursor: pointer;
+.todo-inputButton:hover::before {
+  cursor: pointer !important;
 }
 
-.todo-list:hover{
+
+.todo-list {
+    cursor: pointer; 
+}
+
+.todo-list:hover  {
     background-color: darkgrey;
 }
