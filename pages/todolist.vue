@@ -9,6 +9,7 @@
               v-model="todoinput"
               class="todo-textfield"
               value="今週やること"
+              @keydown="handleKeydownInput($event)"
             ></v-text-field>
             <v-select
               v-model="todoDays"
@@ -117,6 +118,11 @@ export default {
       }
 
       this.todoinput = ''
+    },
+    handleKeydownInput(event) {
+      if (event.key === 'Enter') {
+        this.handleTodoInput()
+      }
     },
     toggleCheck(index) {
       this.todolists[index].checked = !this.todolists[index].checked
